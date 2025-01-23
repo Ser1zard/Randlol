@@ -14,4 +14,6 @@
 
     <dimen name="champion_list">75sp</dimen>
     <dimen name="dialog_lanes">40sp</dimen>
+    <dimen name="champion_day">200sp</dimen>
+    <dimen name="dialog_day">100sp</dimen>
 </resources>

@@ -6,7 +6,6 @@
     <string name="choice">What will it be today?</string>
     <string name="random_pick">Random Pick</string>
     <string name="random_lane">Random Lane</string>
-    <string name="day_pick">Chosen pick and lane of the day:</string>
     <string name="lane_choice">Choose a lane:</string>
     <string name="query_hint">Search for a champion…</string>
 </resources>
