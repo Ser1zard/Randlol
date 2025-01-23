@@ -3,6 +3,15 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="activity_margin">16dp</dimen>
+    <dimen name="activity_margin_navbar">60dp</dimen>
+    <dimen name="dialog_margin">8dp</dimen>
 
-    <dimen name="textview_size_small">16dp</dimen>"
+    <dimen name="dialog_padding">20dp</dimen>
+
+    <dimen name="textview_size_small">16sp</dimen>
+    <dimen name="textview_size_medium">20sp</dimen>
+    <dimen name="textview_size_large">24sp</dimen>
+
+    <dimen name="champion_list">75sp</dimen>
+    <dimen name="dialog_lanes">40sp</dimen>
 </resources>
