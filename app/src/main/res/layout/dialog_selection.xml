@@ -11,35 +11,50 @@
         android:orientation="horizontal"
         android:padding="@dimen/dialog_padding">
 
-        <ImageView
+        <ImageButton
+            android:alpha="0.5"
+            android:scaleType="fitCenter"
+            android:background="@null"
             android:id="@+id/dialog_top"
             android:layout_width="@dimen/dialog_lanes"
             android:layout_height="@dimen/dialog_lanes"
             android:layout_margin="@dimen/dialog_margin"
             android:src="@drawable/top" />
 
-        <ImageView
+        <ImageButton
+            android:alpha="0.5"
+            android:scaleType="fitCenter"
+            android:background="@null"
             android:id="@+id/dialog_jungle"
             android:layout_width="@dimen/dialog_lanes"
             android:layout_height="@dimen/dialog_lanes"
             android:layout_margin="@dimen/dialog_margin"
             android:src="@drawable/jungle" />
 
-        <ImageView
+        <ImageButton
+            android:alpha="0.5"
+            android:scaleType="fitCenter"
+            android:background="@null"
             android:id="@+id/dialog_mid"
             android:layout_width="@dimen/dialog_lanes"
             android:layout_height="@dimen/dialog_lanes"
             android:layout_margin="@dimen/dialog_margin"
             android:src="@drawable/mid" />
 
-        <ImageView
+        <ImageButton
+            android:alpha="0.5"
+            android:scaleType="fitCenter"
+            android:background="@null"
             android:id="@+id/dialog_bot"
             android:layout_width="@dimen/dialog_lanes"
             android:layout_height="@dimen/dialog_lanes"
             android:layout_margin="@dimen/dialog_margin"
             android:src="@drawable/bot" />
 
-        <ImageView
+        <ImageButton
+            android:alpha="0.5"
+            android:scaleType="fitCenter"
+            android:background="@null"
             android:id="@+id/dialog_support"
             android:layout_width="@dimen/dialog_lanes"
             android:layout_height="@dimen/dialog_lanes"
