@@ -1,5 +1,5 @@
 <h1>Randlol</h1>
-<p><strong>Randlol</strong> is an application designed for <em>League of Legends</em> players who want to spice up their games or to practice up with champions and lanes they wouldnt normally pick, thanks to randomly selected champions and lanes.<br>
+<p><strong>Randlol</strong> is an application designed for <em>League of Legends</em> players who want to spice up their games or to practice up with champions and lanes they wouldnt normally pick, thanks to randomly selected champions and lanes.<br><br>
 With customizable options, users can set preferred champions for specific lanes and use up to three different generation methods.</p>
 
 <h2>Available Generation Types:</h2>
