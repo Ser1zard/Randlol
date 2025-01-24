@@ -3,9 +3,11 @@
     <string name="title_home">Random Pick</string>
     <string name="title_champions">Champions</string>
     <string name="title_settings">Settings</string>
-    <string name="choice">What will it be today?</string>
+    <string name="choice_favorites">Random pick from favorites:</string>
+    <string name="choice">Random pick:</string>
     <string name="random_pick">Random Pick</string>
     <string name="random_lane">Random Lane</string>
+    <string name="random">Generate</string>
     <string name="lane_choice">Choose a lane:</string>
     <string name="query_hint">Search for a champion…</string>
 </resources>
