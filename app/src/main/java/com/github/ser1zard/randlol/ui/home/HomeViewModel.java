@@ -3,7 +3,6 @@ package com.github.ser1zard.randlol.ui.home;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 import androidx.lifecycle.ViewModel;
 import com.github.ser1zard.randlol.dao.DatabaseHelper;
 import java.util.ArrayList;
@@ -67,13 +66,35 @@ public class HomeViewModel extends ViewModel {
     Map.Entry<String, String> lane = lanesList.get(random.nextInt(lanesList.size()));
     Map.Entry<String, String> champion = championsList.get(random.nextInt(championsList.size()));
 
-    Log.d("DEBUG", lane + " " + champion);
-
     randomPick.add(lane.getValue());
     randomPick.add(champion.getValue());
 
-    Log.d("DEBUG", randomPick.toString());
-
     return randomPick;
+  }
+
+  public List<PreferredLane> getPreferredLanesByLane(Context context, String lane) {
+    List<PreferredLane> preference = new ArrayList<>();
+
+    dbHelper = new DatabaseHelper(context);
+    db = dbHelper.getReadableDatabase();
+
+    try {
+      String[] selectionArgs = new String[] {lane};
+      cursor = db.rawQuery("SELECT * FROM preferredLanes WHERE lane = ?", selectionArgs);
+
+      if (cursor.moveToFirst()) {
+        do {
+
+          preference.add(new PreferredLane(cursor.getString(0), cursor.getString(1)));
+        } while (cursor.moveToNext());
+      }
+    } finally {
+      if (cursor != null && !cursor.isClosed()) {
+        cursor.close();
+      }
+      dbHelper.close();
+    }
+
+    return preference;
   }
 }
