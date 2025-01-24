@@ -16,4 +16,5 @@
     <dimen name="dialog_lanes">40sp</dimen>
     <dimen name="champion_day">200sp</dimen>
     <dimen name="dialog_day">100sp</dimen>
+    <dimen name="pick_lanes">80sp</dimen>
 </resources>

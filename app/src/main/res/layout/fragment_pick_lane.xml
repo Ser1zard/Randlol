@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/activity_margin_navbar"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:id="@+id/dialog_top"
+            android:layout_width="@dimen/pick_lanes"
+            android:layout_height="@dimen/pick_lanes"
+            android:layout_margin="@dimen/dialog_margin"
+            android:src="@drawable/top" />
+
+        <ImageButton
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:id="@+id/dialog_jungle"
+            android:layout_width="@dimen/pick_lanes"
+            android:layout_height="@dimen/pick_lanes"
+            android:layout_margin="@dimen/dialog_margin"
+            android:src="@drawable/jungle" />
+
+        <ImageButton
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:id="@+id/dialog_mid"
+            android:layout_width="@dimen/pick_lanes"
+            android:layout_height="@dimen/pick_lanes"
+            android:layout_margin="@dimen/dialog_margin"
+            android:src="@drawable/mid" />
+
+        <ImageButton
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:id="@+id/dialog_bot"
+            android:layout_width="@dimen/pick_lanes"
+            android:layout_height="@dimen/pick_lanes"
+            android:layout_margin="@dimen/dialog_margin"
+            android:src="@drawable/bot" />
+
+        <ImageButton
+            android:scaleType="fitCenter"
+            android:background="@null"
+            android:id="@+id/dialog_support"
+            android:layout_width="@dimen/pick_lanes"
+            android:layout_height="@dimen/pick_lanes"
+            android:layout_margin="@dimen/dialog_margin"
+            android:src="@drawable/support" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
