@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import androidx.lifecycle.ViewModel;
 import com.github.ser1zard.randlol.dao.DatabaseHelper;
+import com.github.ser1zard.randlol.utilities.RandomGenerator;
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -58,7 +60,8 @@ public class HomeViewModel extends ViewModel {
     }
 
     List<String> randomPick = new ArrayList<>();
-    Random random = new Random();
+    RandomGenerator randomGenerator = new RandomGenerator();
+    Random random = randomGenerator.getRandom();
 
     List<Map.Entry<String, String>> lanesList = new ArrayList<>(lanes.entrySet());
     List<Map.Entry<String, String>> championsList = new ArrayList<>(champions.entrySet());
