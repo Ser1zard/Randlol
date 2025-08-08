@@ -22,11 +22,11 @@ import java.util.Stack;
 public class HomeFragment extends Fragment {
 
   private View homeView;
-  private View pickLaneView, randomPickView;
+  private View pickLaneView, randomPickView, randomLaneView;
   private Stack<View> viewStack;
   private ViewGroup parentLayout;
-  private Button randomPick, generate;
-  private ImageView randomChampion, championRandom, laneRandom;
+  private Button randomPick, generate, randomLane;
+  private ImageView randomChampion, championRandom, laneRandom, laneRandomLane, championRandomLane;
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,16 +37,22 @@ public class HomeFragment extends Fragment {
     homeView = root.findViewById(R.id.home_layout);
     pickLaneView = inflater.inflate(R.layout.fragment_pick_lane, container, false);
     randomPickView = inflater.inflate(R.layout.fragment_random_pick, container, false);
+    randomLaneView = inflater.inflate(R.layout.fragment_random_lane, container, false);
 
     parentLayout = (ViewGroup) homeView.getParent();
 
     Button randomPickButton = root.findViewById(R.id.random_pick);
     randomPickButton.setOnClickListener(v -> {
       viewStack.push(homeView);
-
       replaceView(pickLaneView);
-
       checkPreferences();
+    });
+
+    Button randomLaneButton = root.findViewById(R.id.random_lane);
+    randomLaneButton.setOnClickListener(v -> {
+      viewStack.push(homeView);
+      replaceView(randomLaneView);
+      randomLaneInit();
     });
 
     generate = root.findViewById(R.id.random);
@@ -140,11 +146,20 @@ public class HomeFragment extends Fragment {
 
             randomChampion = randomPickView.findViewById(R.id.champion_random_pick);
             randomChampion.setImageResource(
-                getResources().getIdentifier(pick.getChampion().toLowerCase(), "drawable",
+                getResources().getIdentifier(getChampionImage(pick.getChampion()), "drawable",
                     getContext().getPackageName()));
           });
         });
       }
     }
+  }
+
+  @NonNull
+  private String getChampionImage(String champion) {
+    return champion.toLowerCase().replace("'", "").replace(" ", "").replace(".", "");
+  }
+
+  private void randomLaneInit() {
+
   }
 }
